@@ -1,5 +1,4 @@
-Create a C# console application.
-
+                                                          ** GUIDED P3**
 Store application data in a multidimensional string array named ourAnimals.
 
 The ourAnimals array includes the following "pet characteristics" for each animal:
@@ -36,9 +35,14 @@ The main features enable the following tasks:
   
   Display all dogs that meet user specified physical characteristics.
 
-                                                                        ** GUIDED P4**
+                                                          ** GUIDED P4**
 Creating Dog attribute search
 
 Gather input for the pet characteristic search term Loop through the animals array and identify "dogs" For each dog, combine the physical and personality descriptions to search Search the combined description for the input term match Output the dogs that have a term match Suggested donation data
 
 Defining suggestedDonation string Expand the ourAnimals array to contain suggestedDonation and populate sample data for suggestedDonation Ensure all usage of ourAnimals array accounts for the added suggestedDonation data Output suggestedDonation with regional currency symbol ($, €, ¥,... )
+                                                          ** GUIDED P5**
+                                                          
+Randomized Animal Assignment: Shuffling the list of petting zoo animals to ensure each school visit gets a unique experience.
+Customizable Group Sizes: By default, students are divided into six groups, but the number of groups can be customized.
+Dynamic School Visits: Stimulagting visits from multiple schools, each receiving a structured animal group assignment.
