@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 Random random = new Random();
 Console.CursorVisible = false;
@@ -35,11 +35,21 @@ while (!shouldExit)
     }
     else
     {
-        if (sickPlayer())
+        if (fasterPlayer())
+        {
+            Move(2);
+
+        }
+        else if (sickPlayer())
         {
             FreezePlayer();
+
         }
-        Move();
+        else
+        {
+            Move();
+
+        }
         if (Ate())
         {
             ChangePlayer();
@@ -84,6 +94,21 @@ bool Ate()
     return hasAte;
 }
 
+// checking if player state is [ ^_^ ]:
+bool fasterPlayer()
+{
+    bool isFaster = false;
+    if (player.Equals(states[1]))
+    {
+        isFaster = true;
+    }
+    else
+    {
+        isFaster = false;
+    }
+    return isFaster;
+}
+
 // checking if player state is [ X_X ]:
 bool sickPlayer()
 {
@@ -115,7 +140,7 @@ void FreezePlayer()
 }
 
 // Reads directional input from the Console and moves the player
-void Move()
+void Move(int speed = 1)
 {
     int lastX = playerX;
     int lastY = playerY;
@@ -129,10 +154,10 @@ void Move()
             playerY++;
             break;
         case ConsoleKey.LeftArrow:
-            playerX--;
+            playerX -= speed;
             break;
         case ConsoleKey.RightArrow:
-            playerX++;
+            playerX += speed;
             break;
         case ConsoleKey.Escape:
             shouldExit = true;
